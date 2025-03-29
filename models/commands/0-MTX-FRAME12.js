@@ -1,4 +1,4 @@
-imodule.exports.config = {
+module.exports.config = {
   name: "frame12",
   version: "7.3.1",
   hasPermssion: 0,

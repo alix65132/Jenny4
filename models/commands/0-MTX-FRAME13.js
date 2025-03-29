@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "frame13",
   version: "7.3.1",
-  hasPermssion: 0,
+  hasPermssion: 2,
   credits: "uzairrajput",///don't change my Credit Coz i Edit 
   description: "Get Pair From Mention",
   commandCategory: "img",
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
 
   let circleOne = await jimp.read(await circle(avatarOne));
   let circleTwo = await jimp.read(await circle(avatarTwo));
-  batgiam_img.composite(circleOne.resize(500, 500), 17000, 540).composite(circleTwo.resize(2235, 2235), 568, 465);
+  batgiam_img.composite(circleOne.resize(500, 500), 17000, 540).composite(circleTwo.resize(700, 700), 568, 465);
 
   let raw = await batgiam_img.getBufferAsync("image/jpeg");
 

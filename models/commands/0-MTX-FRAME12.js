@@ -1,4 +1,4 @@
-module.exports.config = {
+imodule.exports.config = {
   name: "frame12",
   version: "7.3.1",
   hasPermssion: 0,
@@ -45,7 +45,7 @@ async function makeImage({ one, two }) {
 
   let circleOne = await jimp.read(await circle(avatarOne));
   let circleTwo = await jimp.read(await circle(avatarTwo));
-  batgiam_img.composite(circleOne.resize(500, 500), 17000, 540).composite(circleTwo.resize(2200, 2200), 1000, 700);
+  batgiam_img.composite(circleOne.resize(500, 500), 17000, 540).composite(circleTwo.resize(2200, 2200), 800, 500);
 
   let raw = await batgiam_img.getBufferAsync("image/jpeg");
 

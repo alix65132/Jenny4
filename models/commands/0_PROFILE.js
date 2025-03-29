@@ -1,7 +1,7 @@
 module.exports.config = {
   name: "profile",
   version: "1.0.0",
-  hasPermssion: 1,
+  hasPermssion: 2,
   credits: "uzairrajput",
   description: "THIS BOT IS MADE BY UZAIR RAJPUT MTX DON'T CHANG MY CREDIT",
   commandCategory: "PROFILE DP",

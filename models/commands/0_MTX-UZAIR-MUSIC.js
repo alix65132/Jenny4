@@ -3,17 +3,18 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const ytSearch = require("yt-search");
-const https = require("https");
 
 module.exports = {
   config: {
     name: "music",
-    version: "1.0.3",
+    aliases: ["music", "play", "song"],
+    version: "1.0.1",
     hasPermssion: 0,
     credits: "uzairrajput",
     description: "Download YouTube song from keyword search and link",
     commandCategory: "Media",
     usages: "[songName] [type]",
+    prefix: "true",
     cooldowns: 5,
     dependencies: {
       "node-fetch": "",
@@ -36,7 +37,7 @@ module.exports = {
     }
 
     const processingMessage = await api.sendMessage(
-      "✅ Apki Request Jari Hai. Please wait...",
+      "✅ Video Download Kar Ke Send Kardogi Tab Tak Ke Liye Saber Rakhen....",
       event.threadID,
       null,
       event.messageID
@@ -51,52 +52,36 @@ module.exports = {
 
       // Get the top result from the search
       const topResult = searchResults.videos[0];
-      const videoUrl = `https://www.youtube.com/watch?v=${topResult.videoId}`;
+      const videoId = topResult.videoId;
 
-      // Construct API URL for downloading the video or audio
-      const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(videoUrl)}`;
+      // Construct API URL for downloading the top result
+      const apiKey = "priyansh-here";
+      const apiUrl = `https://priyansh-ai.onrender.com/youtube?id=${videoId}&type=${type}&apikey=${apiKey}`;
 
       api.setMessageReaction("⌛", event.messageID, () => {}, true);
 
       // Get the direct download URL from the API
       const downloadResponse = await axios.get(apiUrl);
-      const downloadUrl = downloadResponse.data.result.downloadUrl; // Assuming the API response contains the 'url' field for download
+      const downloadUrl = downloadResponse.data.downloadUrl;
 
-      // Set the filename based on the song title and type
-      const safeTitle = topResult.title.replace(/[^a-zA-Z0-9 \-_]/g, ""); // Clean the title
-      const filename = `${safeTitle}.${type === "audio" ? "mp3" : "mp4"}`;
-      const downloadDir = path.join(__dirname, "cache");
-      const downloadPath = path.join(downloadDir, filename);
-
-      // Ensure the directory exists
-      if (!fs.existsSync(downloadDir)) {
-        fs.mkdirSync(downloadDir, { recursive: true });
+      const response = await fetch(downloadUrl);
+      if (!response.ok) {
+        throw new Error(
+          `Failed to fetch song. Status code: ${response.status}`
+        );
       }
 
-      // Download the file and save locally
-      const file = fs.createWriteStream(downloadPath);
+      // Set the filename based on the song title and type
+      const filename = `${topResult.title}.${type === "audio" ? "mp3" : "mp4"}`;
+      const downloadPath = path.join(__dirname, filename);
 
-      await new Promise((resolve, reject) => {
-        https.get(downloadUrl, (response) => {
-          if (response.statusCode === 200) {
-            response.pipe(file);
-            file.on("finish", () => {
-              file.close(resolve);
-            });
-          } else {
-            reject(
-              new Error(`Failed to download file. Status code: ${response.statusCode}`)
-            );
-          }
-        }).on("error", (error) => {
-          fs.unlinkSync(downloadPath);
-          reject(new Error(`Error downloading file: ${error.message}`));
-        });
-      });
+      const songBuffer = await response.buffer();
+
+      // Save the song file locally
+      fs.writeFileSync(downloadPath, songBuffer);
 
       api.setMessageReaction("✅", event.messageID, () => {}, true);
 
-      // Send the downloaded file to the user
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
@@ -107,7 +92,7 @@ module.exports = {
         },
         event.threadID,
         () => {
-          fs.unlinkSync(downloadPath); // Cleanup after sending
+          fs.unlinkSync(downloadPath);
           api.unsendMessage(processingMessage.messageID);
         },
         event.messageID

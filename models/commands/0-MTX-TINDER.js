@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "tinder",
+	name: "rishtakaranewalikhala",
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "uzairrajput",

@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "rishtakaranewalikhala",
+	name: "tinder",
 	version: "1.0.0",
 	hasPermssion: 0,
 	credits: "uzairrajput",
@@ -41,7 +41,7 @@ module.exports.run = async ({ api, event, args, getText, Users, Currencies }) =>
 		block
 	} = data;
 
-	const msg = `====[TINDER 🔥]====\n❤️‍🔥 I would like to introduce you ❤️‍🔥 \nName: ${name}\n👁Main name: ${shortname}\n🤳Username: ${username == true ? "not used" : username}\n👀Gender: ${gender == "MALE" ? "Male" : "Female"}\n🏷Uid: ${id}\n🤝Friends: ${friend == true ? "Befriended with bot" : "Unfriended bots"}\n👋${mess == true ? "Messaged with bot" : "haven't texted with a bot yet"}\n🙄${block == true ? "Bot messages blocked" : "Don't block bot messages"}\n🗺Business: ${cv == null ? "without" : cv}\n💌Duty: ${chucvu == null ? "Without" : chucvu}\n🔗 Link FB: ${url}\n====[TINDER 🔥]====\n\n𝐶𝑜𝑑𝑒 𝐵𝑦 : 𝑈𝑧𝑎𝑖𝑟 𝑅𝑎𝑗𝑝𝑢𝑡.`;
+	const msg = `====[TINDER 🔥]====\n❤️‍🔥 I would like to introduce you ❤️‍🔥 \nName: ${name}\n👁Main name: ${shortname}\n🤳Username: ${username == true ? "not used" : username}\n👀Gender: ${gender == "MALE" ? "Male" : "Female"}\n🏷Uid: ${id}\n🤝Friends: ${friend == true ? "Befriended with bot" : "Unfriended bots"}\n👋${mess == true ? "Messaged with bot" : "haven't texted with a bot yet"}\n🙄${block == true ? "Bot messages blocked" : "Don't block bot messages"}\n🗺Business: ${cv == null ? "without" : cv}\n💌Duty: ${chucvu == null ? "Without" : chucvu}\n🔗 Link FB: ${url}\n====[TINDER 🔥]====`;
 	const avatar = (await axios.get(`https://graph.facebook.com/${id}/picture?width=720&height=720&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`,
 		{ responseType: "stream" })).data;
 	avatar.path = 'avatar.png';

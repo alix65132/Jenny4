@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "tinder",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "uzairrajput",
+	credits: "NTKhang",
 	description: "User scanning",
 	commandCategory: "Love",
 	usages: "/Tinder Boys or Girls or All",

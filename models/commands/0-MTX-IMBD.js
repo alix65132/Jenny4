@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 module.exports.config = {
-    name: "imdb",
+    name: "findmovie",
     version: "1.0.6",
     hasPermission: 0,
     credits: "uzairrajput",

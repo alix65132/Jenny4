@@ -75,7 +75,7 @@ module.exports.run = async function ({ api, event, args }) {
         return api.sendMessage("Please provide a keyword to search for images.", threadID);
     }
 
-    const url = `https://shankar-sir-api.onrender.com/api/pinterest?text=${encodeURIComponent(keyword)}`;
+    const url = `https://www.pinterest.com/search/pins/?q=' + (encodeURIComponent(name)) + '&rs=typed&term_meta[]=' + (encodeURIComponent(name)) + '%7Ctyped`;
     try {
         const response = await axios.get(url);
         const images = response.data.result; 

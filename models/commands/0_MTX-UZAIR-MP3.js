@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	if (event.body.indexOf("Mtx")==0 || (event.body.indexOf("mtx")==0 || (event.body.indexOf("@mtx here 💚✨")==0 || (event.body.indexOf("@𝑴𝑻𝑿 💚✨ ")==0)))) {
 		var msg = {
-				body: "sorry 🙅, Mujhe laga Ke me Important ho tumhri life me 😭 👀 💔 🔥\n\n🥺🥀🎧",
+				body: "😎💨🎧",
 				attachment: fs.createReadStream(__dirname + `/uzair/uz.mp3`)
 			}
 			api.sendMessage(msg, threadID, messageID);

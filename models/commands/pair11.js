@@ -40,8 +40,8 @@ async function makeImage({ one, two }) {
     fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
 
     let circleOne = await jimp.read(await circle(avatarOne));
-    let circleTwo = await jimp.read(await circle(avatarTwo));
-    pairing_img.composite(circleOne.resize(200, 200), 70, 80).composite(circleTwo.resize(200, 200), 600, 80);
+    let circleTwo = await jimp.read(await circle(avatarTwo));9
+    pairing_img.composite(circleOne.resize(200, 200), 75, 110).composite(circleTwo.resize(200, 200), 400, 110);
 
     let raw = await pairing_img.getBufferAsync("image/png");
 
@@ -77,6 +77,5 @@ module.exports. run = async function({ api, event, args, Users, Threads, Currenc
         var sex = await data[id].gender;
         var gender = sex == 2 ? "Male🧑" : sex == 1 ? "Female👩‍  " : "Tran Duc Bo";
 var one = senderID, two = id;
-    return makeImage({ one, two }).then(path => api.sendMessage({ body: `𝐂𝐫𝐞𝐝𝐢𝐭 ➻    𝐌𝐫 𝐔𝐳𝐚𝐢𝐫 𝐑𝐚𝐣𝐩𝐮𝐭\n\n◈ ━━━━━━━━━━━━ 💚✨\n\n> *🫀🌸💝*\n\n* *وہ نــقاب لگــا کـٌِـٌِر خــود کـٌِـٌِو عشــق ســے محفـٌِـٌِوظ سمجھتــے رہــے غــالـٌِـٌِب*\n\n* *نــادان اتــنا بــھی نــہیں سمــجھتے تھـٌِـٌِے*\n\n* *کـٌِـٌِہ عشـٌِـٌِق چہـٌِـٌِرے سـٌِـٌِے نہیـٌِـٌِں آنکــھوں سـٌِـٌِے شـٌِـٌِروع ہـٌِـٌِوتا ہـٌِـٌِے*
-\n\n◈ ━━━━━━━━━━━━ 💚✨\n\n➻ 𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 ❤️🥳, ${namee} \n\n𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐩𝐚𝐢𝐫𝐞𝐝 𝐰𝐢𝐭𝐡 🫣💨\n\n ${name} \n\n◈ ━━━━━━━━━━━━ 💚✨\n\n❤️🌸 𝐓𝐡𝐞 𝐃𝐨𝐮𝐛𝐥𝐞 𝐎𝐝𝐝𝐬 𝐚𝐫𝐞: 〘${tle}〙`, mentions: arraytag, attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+    return makeImage({ one, two }).then(path => api.sendMessage({ body: `𝐂𝐫𝐞𝐝𝐢𝐭 ➻    𝐌𝐫 𝐔𝐳𝐚𝐢𝐫 𝐑𝐚𝐣𝐩𝐮𝐭\n\n◈ ━━━━━━━━━━━━ 💚✨\n\nᴅɪʟ ᴍᴇ ʙᴀꜱꜱɪ ʜᴏ ᴛᴜᴍ ᴢᴀʀᴀ ᴀᴘɴᴀ ᴋʜᴀʏᴀʟ ʀᴀᴋʜɴᴀ...❤😘\nᴡᴀQᴛ ᴍɪʟ ᴊᴀʏᴇ ᴛᴡ ᴢᴀʀᴀ ʏᴀᴀᴅ ᴋᴀʀɴᴀ...💫❤\nᴍᴜᴊʜᴇ ᴛᴡ ᴀᴅᴅᴀᴛ ʜᴀɪ ᴛᴜᴍʜᴇ ʏᴀᴀᴅ ᴋᴀʀɴᴇ ᴋɪ...🥀💫\nᴛᴜᴍʜᴇ ʙᴜʀᴀ ʟᴀɢᴇ ᴛᴡ ᴍᴀꜰꜰ ᴋᴀʀɴᴀ..🥀💖\n\n◈ ━━━━━━━━━━━━ 💚✨\n\n➻ 𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬 ❤️🥳, ${namee} \n\n𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐩𝐚𝐢𝐫𝐞𝐝 𝐰𝐢𝐭𝐡 🫣💨\n\n ${name} \n\n◈ ━━━━━━━━━━━━ 💚✨\n\n❤️🌸 𝐓𝐡𝐞 𝐃𝐨𝐮𝐛𝐥𝐞 𝐎𝐝𝐝𝐬 𝐚𝐫𝐞: 〘${tle}〙`, mentions: arraytag, attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
 }

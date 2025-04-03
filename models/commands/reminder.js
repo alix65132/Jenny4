@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "reminder",
 	version: "0.0.1-beta",
 	hasPermssion: 0,
-	credits: "Zia_Rein",
+	credits: "uzairrajput",
 	description: "notification",
 	commandCategory: "Countdown",
 	usages: "[Time] [Text] ",
@@ -13,7 +13,7 @@ module.exports.run = async function({ api, event, args, Users }) {
   
 	const time = args[0];
 	const text = args.join(" ").replace(time, "");
-	if (isNaN(time)) return api.sendMessage(`How to use?\n${global.config.PREFIX}reminder <time> <txt>\n\nExample:\n${global.config.PREFIX}reminder 60 assignment make a powerful backend using NodeJs\n\nTake note:\n59 is equal to second\n60 is equal to minute to make a minute remind please use long numbers\n\nExample for minutes:\n${global.config.PREFIX}reminder 99999 <txt>\n99999 is equal to 16 minutes\n\nCeated by: Zia_Rein 100085021637694`, event.threadID, event.messageID);
+	if (isNaN(time)) return api.sendMessage(`How to use?\n${global.config.PREFIX}reminder <time> <txt>\n\nExample:\n${global.config.PREFIX}reminder 60 assignment make a powerful backend using NodeJs\n\nTake note:\n59 is equal to second\n60 is equal to minute to make a minute remind please use long numbers\n\nExample for minutes:\n${global.config.PREFIX}reminder 99999 <txt>\n99999 is equal to 16 minutes\n\nCeated by: Uzair Rajput 61552682190483`, event.threadID, event.messageID);
 	const display = time > 59 ? `${time / 60} minute` : `${time} second`;
 	api.sendMessage(`i will remind you later\n ${display}`, event.threadID, event.messageID);
 	await new Promise(resolve => setTimeout(resolve, time * 1000));

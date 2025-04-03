@@ -30,7 +30,7 @@ if (!permission.includes(event.senderID)) return api.sendMessage("You don't have
     else {
         for (const idThread of allThread) {
             const threadSetting = global.client.threadData.get(idThread.threadID) || {};
-            api.changeNickname(`[ ${(threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, idThread.threadID, idBot, (err) => (err) ? threadError.push(idThread.threadID) : '');
+            api.changeNickname(`[ ${(threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by uzair rajput" : global.config.BOTNAME}`, idThread.threadID, idBot, (err) => (err) ? threadError.push(idThread.threadID) : '');
             count+=1;
             await new Promise(resolve => setTimeout(resolve, 500));
         }

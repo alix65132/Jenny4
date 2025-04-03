@@ -2,7 +2,7 @@ module.exports.config = {
    name: 'remini',
    version: '0.0.1',
    hasPermssion: 0,
-   credits: 'DC-Nam re model by blue',
+   credits: 'uzairrajput',
   description: 'Increase image quality to 4k',
  commandCategory: 'image increase',
  usages: 'replyimage <cmd name>',

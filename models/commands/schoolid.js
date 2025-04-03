@@ -2,9 +2,9 @@ module.exports.config = {
   name: "schoolid",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Kaiden",
-  description: "enroll na mga bobo",
-  commandCategory: "Giáº£i trÃ­",
+  credits: "uzairrajput",
+  description: "THIS BOT WAS MADE BY UZAIRMTX",
+  commandCategory: "UZAIRRAJPUT",
   usages: "@mention",
   dependencies: {
         "axios": "",
@@ -96,7 +96,7 @@ module.exports.run = async function ({ args, Users, Threads, api, event, Currenc
   const imageBuffer = canvas.toBuffer();
   fs.writeFileSync(pathImg, imageBuffer);
   fs.removeSync(pathAvt1);
-  return api.sendMessage({ body: ` `, attachment: fs.createReadStream(pathImg) },
+  return api.sendMessage({ body: `‎𝐂𝐫𝐞𝐝𝐢𝐭 ➻    𝐌𝐫 𝐔𝐳𝐚𝐢𝐫 𝐑𝐚𝐣𝐩𝐮𝐭`, attachment: fs.createReadStream(pathImg) },
       event.threadID,
       () => fs.unlinkSync(pathImg),
       event.messageID);

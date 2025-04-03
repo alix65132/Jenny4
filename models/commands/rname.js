@@ -2,8 +2,8 @@ module.exports.config = {
 	name: "rname",
 	version: "1.0.1",
 	hasPermssion: 0,
-	credits: "Mirai Team",
-	description: "Random biệt danh tiếng NHẬT 🤔",
+	credits: "uzairrajput",
+	description: "Random Japanese nickname 🤔",
 	commandCategory: "other",
 	cooldowns: 5,
 	dependencies: {

@@ -2,7 +2,7 @@ module.exports.config = {
     name: "sadcat",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "John Arida",
+    credits: "uzairrajput",
     description: "",
     commandCategory: "image",
     cooldowns: 0,

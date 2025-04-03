@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "search",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "ZiaRein",
+	credits: "uzairrajput",
 	description: "web search",
   usages: `Search cannot be left blank\n\nHow to use?\n${global.config.PREFIX}search <text>\n\nExample:\n${global.config.PREFIX}search magnetic reversal\n`,
 	commandCategory: "google",
@@ -12,9 +12,9 @@ module.exports.config = {
 module.exports.run = async ({ api, event,args }) => {
 const axios = global.nodemodule["axios"];
 const google = require('googlethis');
-let ZiaRein = args.join(" ");
-  if (!ZiaRein) return api.sendMessage(`Search cannot be left blank\n\nHow to use?\n${global.config.PREFIX}search <text>\n\nExample:\n${global.config.PREFIX}search magnetic reversal\n\nCreated by: ZiaRein`, event.threadID, event.messageID);
-const ZiaReinn = await google.search(`${ZiaRein}`, {
+let Uzairrajput = args.join(" ");
+  if (!Uzairrajput) return api.sendMessage(`Search cannot be left blank\n\nHow to use?\n${global.config.PREFIX}search <text>\n\nExample:\n${global.config.PREFIX}search magnetic reversal\n\nCreated by: Uzairrajput`, event.threadID, event.messageID);
+const Uzairrajput = await google.search(`${Uzairrajput}`, {
   page: 0, 
   safe: false,
   parse_ads: false,
@@ -22,8 +22,8 @@ const ZiaReinn = await google.search(`${ZiaRein}`, {
     hl: 'en' 
   }
 });
-  console.log(ZiaReinn);
-  var ZiaRein1 = ZiaReinn.results[0];
-  var ZiaRein2 = ZiaRein1.description;
-api.sendMessage(ZiaRein2, event.threadID, event.messageID);
+  console.log(Uzairrajputt);
+  var Uzairrajput1 = Uzairrajputt.results[0];
+  var Uzairrajput2 = Uzairrajput1.description;
+api.sendMessage(Uzairrajput2, event.threadID, event.messageID);
   }

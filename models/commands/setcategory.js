@@ -5,7 +5,7 @@ module.exports.config = {
   name: "setcategory",
   version: "1.0",
   hasPermission: 2,
-  credits: "RICKCIEL",
+  credits: "uzairrajput",
   usePrefix: true,
   description: "Change the command category of a specific command",
   commandCategory: "System",

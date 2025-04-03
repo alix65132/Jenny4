@@ -1,7 +1,7 @@
 module.exports.config = {
   name: 'removebg',
   version: '1.1.1',
-  hasPermssion: 0,
+  hasPermssion: 2,
   credits: 'uzairrajput',
   description: 'Edit photo',
   commandCategory: 'Tools',

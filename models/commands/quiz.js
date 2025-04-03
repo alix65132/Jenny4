@@ -1,8 +1,8 @@
 module.exports.config = {
 	name: "quiz",
 	version: "1.0.0",
-	credits: "Zia_Rein",
-	hasPermssion: 0,
+	credits: "uzairrajput",
+	hasPermssion: 2,
 	description: "Answer question",
 	commandCategory: "game-mp",
 	cooldowns: 5,

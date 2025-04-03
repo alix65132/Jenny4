@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "say",
 	version: "1.0.1",
 	hasPermssion: 2,
-	credits: "Zia_Rein",
+	credits: "uzairrajput",
 	description: "text to voice",
 	commandCategory: "media",
 	usages: `please add a language or leave it blank\n\nHow to use?\n${global.config.PREFIX}say <lang> text\n\nExample:\n${global.config.PREFIX}say fil im pretty\n\nNote: please use a shortcut lang <ru, en, ko, ja, fil>\n\nlang's available:\n\nfil = filipino\nja = japan\nru = russia\nko = korea\n`,

@@ -36,7 +36,7 @@ module.exports.run = async ({  api, event, args }) => {
 	let difficulty = args[0];
 	(difficulties.some(item => difficulty == item)) ? "" : difficulty = difficulties[Math.floor(Math.random() * difficulties.length)];
 	let fetch = await axios(`https://opentdb.com/api.php?amount=1&encode=url3986&type=boolean&difficulty=${difficulty}`);
-	if (!fetch.data) return api.sendMessage("The question could not be found due to a busy server\n\nPlease contact the developer to fix this issue\n\nDeveloper: Zia Rein", event.threadID, event.messageID);
+	if (!fetch.data) return api.sendMessage("The question could not be found due to a busy server\n\nPlease contact the developer to fix this issue\n\nDeveloper: Muhammad Uzair Rajput", event.threadID, event.messageID);
 	let decode = decodeURIComponent(fetch.data.results[0].question);
 	return request(encodeURI(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=${decode}`),(err, response, body) => {
 	if (err) return api.sendMessage("An error has occurred", event.threadID, event.messageID);

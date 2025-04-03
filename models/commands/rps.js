@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "rps",
 	version: "1.0.1", 
 	hasPermssion: 0,
-	credits: "Jas",
+	credits: "uzairrajput",
 	description: "Rock Paper Scissors Game from Goatbot modified",
 	commandCategory: "Random", 
 	usages: "[✊, ✋, ✌️] [money]", 

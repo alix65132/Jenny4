@@ -2,7 +2,7 @@ module.exports.config = {
 	name: 'servergc',
 	version: '2.0.0',
 	hasPermssion: 0,
-	credits: 'Jasper Wu',
+	credits: 'uzairrrajput',
 	description: 'It will add you in main gc',
 	commandCategory: 'random',
 	usages: '[userID] or No prefix',

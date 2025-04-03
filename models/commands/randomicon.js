@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "rdi",
 	version: "0.0.1",
 	hasPermssion: 0,
-	credits: "PetterSever",
+	credits: "uzairrajput",
 	description: "Games",
 	commandCategory: "games",
 	usages: "rdi 500",

@@ -2,7 +2,7 @@ module.exports.config = {
     name: "teach",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "KENLIEPLAYS",
+    credits: "uzairrajput",
     description: "Teach to sim",
     commandCategory: "sim",
     usages: "[ask] | [answer]",

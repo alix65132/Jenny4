@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "rnamebox",
 	version: "1.0.0",
 	hasPermssion: 2,
-	credits: "CatalizCS",
+	credits: "uzairrajput",
 	description: "Change the nickname of the entire group",
 	commandCategory: "System",
 	usages: "[Nickname needs to be placed]",

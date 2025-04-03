@@ -3,7 +3,7 @@ module.exports.config = {
 	name: "pyar",
     version: "1.0.1",
 	hasPermssion: 0,
-	credits: "Candy", 
+	credits: "uzairrajput", 
 	description: "no prefix",
 	commandCategory: "No command marks needed",
 	usages: "...",
@@ -13,9 +13,9 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	let react = event.body.toLowerCase();
-	if(react.includes("𝙨𝙚𝙭") ||
-     react.includes("𝙨𝙚𝙭𝙮") || 
-react.includes("PYAR")) {
+	if(react.includes("piyar") ||
+     react.includes("Piyar") || 
+react.includes("PIYAR")) {
 		var msg = {
 				body: "𝙝𝙤𝙩 𝙨𝙚𝙭𝙮 𝙧𝙤𝙢𝙖𝙣𝙘𝙚",
 				attachment: fs.createReadStream(__dirname + `/noprefix/candy.jpeg`)

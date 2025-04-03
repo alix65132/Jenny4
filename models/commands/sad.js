@@ -2,7 +2,7 @@ module.exports.config = {
   name: "sad",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Ej",
+  credits: "uzairrajput",
   description: "cheer",
   commandCategory: "QTV BOX",
   usages: "[text]",

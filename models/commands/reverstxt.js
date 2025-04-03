@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "reverse",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Joshua Sy",
+	credits: "uzairrajput",
 	description: "reverse text",
   usages: "[text]",
 	commandCategory: "...",

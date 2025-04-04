@@ -16,7 +16,7 @@ module.exports.run = async function({api, event, args, utils, Users, Threads}) {
         let fs = require("fs-extra");
         let request = require("request");
         let {threadID, senderID, messageID} = event;
-      if ((this.config.credits) != `${cred}`) { return api.sendMessage(`ulol change credits pa `, event.threadID, event.messageID)}
+      if ((this.config.credits) != `${Uzairrajput}`) { return api.sendMessage(`Bache jitne chahe bare ho jaye rehte  bache hi hai ja ke Uzair Rajput credit laga ke aa jo tune batya hai`, event.threadID, event.messageID)}
       if (args.join().indexOf('@') !== -1){ var id = Object.keys(event.mentions) }
       else var id = args[0] || event.senderID;
       if(event.type == "message_reply") { var id = event.messageReply.senderID }

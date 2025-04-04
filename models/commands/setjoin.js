@@ -2,7 +2,7 @@ module.exports.config = {
     name: "setjoin",
     version: "1.0.4",
     hasPermssion: 1,
-    credits: "Mirai Team",
+    credits: "uzairrajput",
     description: "Edit text/animated images when new members join",
     commandCategory: "config",
     usages: "[gif/text] [Text or url to download gif image]",

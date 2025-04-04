@@ -3,7 +3,7 @@ module.exports.config = {
 	name: "solarsystem",
     version: "1.1.8",
 	hasPermssion: 0,
-	credits: "JRT fix by Jukie~~", 
+	credits: "uzairrajput~~", 
 	description: "",
 	commandCategory: "News",
 	usages: "",

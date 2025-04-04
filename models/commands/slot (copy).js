@@ -2,7 +2,7 @@ module.exports.config = {
     name: "slotv2",
     version: "1.0.0",
     hasPermssion: 0,
-    credits: "Mirai Team (mod sang)",
+    credits: "uzairrajput (Uzair Aaroob)",
     description: "Gambling in the form of cunt",
     commandCategory: "game",
     usages: "[number of coins to place]",

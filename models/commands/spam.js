@@ -2,7 +2,7 @@ module.exports.config = {
 name: "spam",
 	version: "",
 	hasPermssion: 2,
-	credits: "",
+	credits: "uzairrajput",
 	description: "",
 	commandCategory: "test",
 	usages: "",

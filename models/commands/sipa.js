@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "sipa",
 	version: "1.0.1", 
 	hasPermssion: 1,
-	credits: "Mirai Team",
+	credits: "uzairrajput",
 	description: "Remove the person you need to remove from the group by tagging",
 	commandCategory: "other", 
 	usages: "[tag]", 

@@ -4,7 +4,7 @@
   name: "spamban",
   version: "2.0.0",
   hasPermssion: 0,
-  credits: "NTKhang", //fix get by  D-Jukie
+  credits: "uzairrajput", //fix get by  Mtx-uzair
   description: `automatically ban users if spambot ${num} times/${timee}s`,
   commandCategory: "System",
   usages: "x",
@@ -43,7 +43,7 @@ module.exports.handleEvent = async function ({ Users, Threads, api, event})  {
     if (global.client.autoban[senderID].number >= num) {
       var namethread = datathread.threadName;
       const moment = require("moment-timezone");
-      const timeDate = moment.tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss");
+      const timeDate = moment.tz("Asia/Karachi").format("DD/MM/YYYY HH:mm:ss");
       let dataUser = await Users.getData(senderID) || {};
       let data = dataUser.data || {};
       if (data && data.banned == true) return;
@@ -56,7 +56,7 @@ module.exports.handleEvent = async function ({ Users, Threads, api, event})  {
         timeStart: Date.now(),
         number: 0
       };
-      api.sendMessage(senderID + " \n⚡️Name: " + dataUser.name + `\n⚡Reason: spam bot ${num} times/${timee}s\n\n✔️Reported to admin bot`, threadID,
+      api.sendMessage(senderID + " \n⚡️Name: " + dataUser.name + `\n⚡Reason: spam bot ${num} times/${timee}s\n\n✔️Reported to admin bot Uzair Rajput`, threadID,
     () => {
     var idad = global.config.ADMINBOT;
     for(let ad of idad) {

@@ -3,7 +3,7 @@ module.exports.config = {
     version: "1.0.2",
     hasPermssion: 0,
     credits: "uzairrajput",
-    description: "Game bầu cua có đặt cược  kiểu anime</> Coder by Binee",
+    description: "Game The vote has a bet on anime</> Coder by Uzair Rajput",
     commandCategory: "economy",
     usages: "<[uzair/sehar/areebu/zainab/maryam/kiran] or [🔥/⚡/��/🦞/🦵/🐱]> <Bet amount (note must be over 50$)>",
     cooldowns: 0
@@ -24,7 +24,7 @@ module.exports.config = {
       const money = (await getData(senderID)).money;
       if (isNaN(args[1]) == true) return api.sendMessage('The "Bet amount" you entered is not a valid number!', threadID, messageID);
       var moneyBet = parseInt(args[1]);
-      if (isNaN(moneyBet) || moneyBet <= 50) return api.sendMessage('The bet amount cannot be less than 50$', threadID, messageID);
+      if (isNaN(moneyBet) || moneyBet <= 50) return api.sendMessage('The bet amount cannot be less than 50$\n\nApke God Father Mr Uzair Rajput-Aaroob', threadID, messageID);
       if (moneyBet > money) return api.sendMessage('Your account does not have enough funds to play.', threadID, messageID);
       var number = [], list = [], listimg = [], win = false;
       var baucua1 = slotItems[Math.floor(Math.random() * slotItems.length)];
@@ -52,7 +52,7 @@ module.exports.config = {
         content1 = 'kiran ';
       }
       else {
-        return api.sendMessage(`Wrong format\n${global.config.PREFIX}${this.config.name} [Umaru/Nami/Chitanda/Mirai/Elaina/Mikasa] hoặc[🔥/⚡/🍙/🦞/🦵/🐱] <Số tiền cược(lưu ý phải trên 50$)>`, threadID, messageID);
+        return api.sendMessage(`Wrong format\n${global.config.PREFIX}${this.config.name} [Uzair/Sehar/Areebu/Zainab/Maryam/Kiaran] or[🔥/⚡/🍙/🦞/🦵/🐱] <The bet amount (note must be over $ 50)>`, threadID, messageID);
       }
       // request
       if (!existsSync(__dirname + '/cache/umaru.jpg')) {
@@ -77,78 +77,78 @@ module.exports.config = {
         request('https://imgur.com/KqBXv0U.gif').pipe(createWriteStream(__dirname + '/cache/quybu.gif'));
       }
       // baucua 1
-      if (baucua1 == 'Umaru') {
-        var bau1 = 'umaru';
+      if (baucua1 == 'Uzair') {
+        var bau1 = 'uzair';
         var bau_1 = __dirname + '/cache/umaru.jpg';
       }
-      else if (baucua1 == 'Nami') {
-        var bau1 = 'nami';
+      else if (baucua1 == 'Sehar') {
+        var bau1 = 'sehar';
         var bau_1 = __dirname + '/cache/nami.jpg';
       }
-      else if (baucua1 == 'Chitanda') {
-        var bau1 = 'chitanda';
+      else if (baucua1 == 'Areebu') {
+        var bau1 = 'areebu';
         var bau_1 = __dirname + '/cache/chitanda.jpg';
       }
-      else if (baucua1 == 'Mirai') {
-        var bau1 = 'mirai';
+      else if (baucua1 == 'Zainab') {
+        var bau1 = 'zainab';
         var bau_1 = __dirname + '/cache/mirai.jpg';
       }
-      else if (baucua1 == 'Elaina') {
-        var bau1 = 'elaina';
+      else if (baucua1 == 'Maryam') {
+        var bau1 = 'maryam';
         var bau_1 = __dirname + '/cache/elaina.jpg';
       }
-      else if (baucua1 == 'Mikasa') {
-        var bau1 = 'mikasa';
+      else if (baucua1 == 'Kiran') {
+        var bau1 = 'kiran';
         var bau_1 = __dirname + '/cache/mikasa.jpg';
       }
       // baucua 2
-      if (baucua2 == 'Umaru') {
-        var bau2 = 'umaru';
+      if (baucua2 == 'Uzair') {
+        var bau2 = 'uzair';
         var bau_2 = __dirname + '/cache/umaru.jpg';
       }
-      else if (baucua2 == 'Nami') {
-        var bau2 = 'nami';
+      else if (baucua2 == 'Sehar') {
+        var bau2 = 'sehar';
         var bau_2 = __dirname + '/cache/nami.jpg';
       }
-      else if (baucua2 == 'Chitanda') {
-        var bau2 = 'chitanda';
+      else if (baucua2 == 'Areebu') {
+        var bau2 = 'areebu';
         var bau_2 = __dirname + '/cache/chitanda.jpg';
       }
-      else if (baucua2 == 'Mirai') {
-        var bau2 = 'mirai';
+      else if (baucua2 == 'Zainab') {
+        var bau2 = 'zainab';
         var bau_2 = __dirname + '/cache/mirai.jpg';
       }
-      else if (baucua2 == 'Elaina') {
-        var bau2 = 'elaina';
+      else if (baucua2 == 'Maryam') {
+        var bau2 = 'maryam';
         var bau_2 = __dirname + '/cache/elaina.jpg';
       }
-      else if (baucua2 == 'Mikasa') {
-        var bau2 = 'mikasa';
+      else if (baucua2 == 'Kiran') {
+        var bau2 = 'kiran';
         var bau_2 = __dirname + '/cache/mikasa.jpg';
       }
       // baucua 3
-      if (baucua3 == 'Umaru') {
-        var bau3 = 'umaru';
+      if (baucua3 == 'Uzair') {
+        var bau3 = 'uzair';
         var bau_3 = __dirname + '/cache/umaru.jpg';
       }
-      else if (baucua3 == 'Nami') {
-        var bau3 = 'nami';
+      else if (baucua3 == 'Sehar') {
+        var bau3 = 'sehar';
         var bau_3 = __dirname + '/cache/nami.jpg';
       }
-      else if (baucua3 == 'Chitanda') {
-        var bau3 = 'chitanda';
+      else if (baucua3 == 'Areebu') {
+        var bau3 = 'areebu';
         var bau_3 = __dirname + '/cache/chitanda.jpg';
       }
-      else if (baucua1 == 'Mirai') {
-        var bau3 = 'mirai';
+      else if (baucua1 == 'Zainab') {
+        var bau3 = 'zainab';
         var bau_3 = __dirname + '/cache/mirai.jpg';
       }
-      else if (baucua3 == 'Elaina') {
-        var bau3 = 'elaina';
+      else if (baucua3 == 'Maryam') {
+        var bau3 = 'maryam';
         var bau_3 = __dirname + '/cache/elaina.jpg';
       }
-      else if (baucua3 == 'Mikasa') {
-        var bau3 = 'Mikasa';
+      else if (baucua3 == 'Kiran') {
+        var bau3 = 'kiran';
         var bau_3 = __dirname + '/cache/mikasa.jpg';
       }
       // array baucua
@@ -161,60 +161,60 @@ module.exports.config = {
       listimg.push(createReadStream(__dirname + '/cache/' + bau3 + '.jpg'))
       // ICON
       // icon 1
-      if (bau1 == 'umaru') {
+      if (bau1 == 'uzair') {
         var icon1 = '🔥';
       }
-      else if (bau1 == 'nami') {
+      else if (bau1 == 'sehar') {
         var icon1 = '⚡'
       }
-      else if (bau1 == 'chitanda') {
+      else if (bau1 == 'areebu') {
         var icon1 = '🍙';
       }
-      else if (bau1 == 'mirai') {
+      else if (bau1 == 'zainab') {
         var icon1 = '🦞';
       }
-      else if (bau1 == 'elaina') {
+      else if (bau1 == 'maryam') {
         var icon1 = '🦵';
       }
-      else if (bau1 == 'mikasa') {
+      else if (bau1 == 'kiran') {
         var icon1 = '🐱';
       }
       // icon 2
-      if (bau2 == 'umaru') {
+      if (bau2 == 'uzair') {
         var icon2 = '🔥';
       }
-      else if (bau2 == 'nami') {
+      else if (bau2 == 'sehar') {
         var icon2 = '⚡'
       }
-      else if (bau2 == 'chitanda') {
+      else if (bau2 == 'areebu') {
         var icon2 = '🍙';
       }
-      else if (bau2 == 'mirai') {
+      else if (bau2 == 'zainab') {
         var icon2 = '🦞';
       }
-      else if (bau2 == 'elaina') {
+      else if (bau2 == 'zainab') {
         var icon2 = '🦵';
       }
-      else if (bau2 == 'mikasa') {
+      else if (bau2 == 'kiran') {
         var icon2 = '🐱';
       }
       // icon 3
-      if (bau3 == 'umaru') {
+      if (bau3 == 'uzair') {
         var icon3 = '🔥';
       }
-      else if (bau3 == 'nami') {
+      else if (bau3 == 'sehar') {
         var icon3 = '⚡'
       }
-      else if (bau3 == 'chitanda') {
+      else if (bau3 == 'areebu') {
         var icon3 = '🍙';
       }
-      else if (bau3 == 'mirai') {
+      else if (bau3 == 'zainab') {
         var icon3 = '🦞';
       }
-      else if (bau3 == 'elaina') {
+      else if (bau3 == 'maryam') {
         var icon3 = '🦵';
       }
-      else if (bau3 == 'mikasa') {
+      else if (bau3 == 'kirana') {
         var icon3 = '🐱';
       }
       // sendMessage

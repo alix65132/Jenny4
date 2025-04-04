@@ -1,9 +1,9 @@
-var cred = "Deku";
+var Uzairrajput = "uzairrajput";
 module.exports.config = {
     name: "stalk",
     version: "1.0.0",
     hasPermision: 0,
-    credits: `${cred}`,
+    credits: `${Uzairrajput}`,
     description: "get info using uid/mention/reply to a message",
     usages: "[reply/uid/@mention/url]",
     commandCategory: "info",

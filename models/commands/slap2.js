@@ -1,5 +1,5 @@
 /**
-* @author ProCoderMew
+* @author Broken Uzair
 * @warn Do not edit code or edit credits
 */
 
@@ -7,7 +7,7 @@ module.exports.config = {
     name: "slapv2",
     version: "2.2.4",
     hasPermssion: 0,
-    credits: "ProCoderMew",
+    credits: "uzairrajput",
     description: "",
     commandCategory: "general",
     usages: "[@tag]",
@@ -27,9 +27,9 @@ module.exports.onLoad = async() => {
     const { resolve } = global.nodemodule["path"];
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
-    const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'slap.png');
-    if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
+    const dirMaterial = __dirname + `/uzair/mtx/`;
+    const path = resolve(__dirname, 'uzair/mtx', 'slap.png');
+    if (!existsSync(dirMaterial + "mtx")) mkdirSync(dirMaterial, { recursive: true });
     if (!existsSync(path)) await downloadFile("https://git.meewmeew.info/data/slap.png", path);
 }
 async function makeImage({ one, two }) {    
@@ -38,7 +38,7 @@ async function makeImage({ one, two }) {
     const path = global.nodemodule["path"];
     const axios = global.nodemodule["axios"];
     const jimp = global.nodemodule["jimp"];
-    const __root = path.resolve(__dirname, "cache", "canvas");
+    const __root = path.resolve(__dirname, "uzair", "mtx");
 
     let slap_image = await jimp.read(__root + "/slap.png");
     let pathImg = __root + `/slap_${one}_${two}.png`;
@@ -64,9 +64,9 @@ module.exports.run = async function ({ event, api, args }) {
     const fs = global.nodemodule["fs-extra"];
     const { threadID, messageID, senderID } = event;
     const mention = Object.keys(event.mentions);
-    if (!mention[0]) return api.sendMessage("Please tag 1 person.", threadID, messageID);
+    if (!mention[0]) return api.sendMessage("𝑃𝑙𝑒𝑎𝑠𝑒 𝐴𝑘 𝐼𝑑 𝑀𝑒𝑛𝑡𝑖𝑜𝑛 𝐾𝑎𝑟𝑒𝑛..", threadID, messageID);
     else {
         var one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "Toang ALO nè", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: "😡😡😡", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
     }
 }

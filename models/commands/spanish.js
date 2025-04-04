@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "spanish",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "ZiaRein",
+	credits: "uzairrajput",
 	description: "translate to spain",
 	commandCategory: "translator",
 	usages: "[Text]",

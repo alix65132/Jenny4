@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "time",
+  name: "exacttime",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "uzairrajput ",

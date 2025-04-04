@@ -1,9 +1,9 @@
-var cred = "Deku";
+var uzairrajput = "uzairrajput";
 module.exports.config = {
-    name: "stalk",
+    name: "stalkv3",
     version: "1.0.0",
     hasPermision: 0,
-    credits: `${cred}`,
+    credits: `${uzairrajput}`,
     description: "get info using uid/mention/reply to a message",
     usages: "[reply/uid/@mention/url]",
     commandCategory: "info",
@@ -16,7 +16,7 @@ module.exports.run = async function({api, event, args, utils, Users, Threads}) {
         let fs = require("fs-extra");
         let request = require("request");
         let {threadID, senderID, messageID} = event;
-      if ((this.config.credits) != `${cred}`) { return api.sendMessage(`ulol change credits pa `, event.threadID, event.messageID)}
+      if ((this.config.credits) != `${uzairrajput}`) { return api.sendMessage(`meRe owner ka credit chor ja ke unke credit laga ke aa phir command chalegi`, event.threadID, event.messageID)}
       if (args.join().indexOf('@') !== -1){ var id = Object.keys(event.mentions) }
       else var id = args[0] || event.senderID;
       if(event.type == "message_reply") { var id = event.messageReply.senderID }

@@ -2,7 +2,7 @@ module.exports.config = {
   name: "sponge",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Sake",
+  credits: "uzairrajput",
   description: "Spongebob memes",
   commandCategory: "memes",
   usages: "text 1 | text 2",

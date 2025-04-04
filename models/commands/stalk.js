@@ -1,8 +1,8 @@
 module.exports.config = {
-  name: "stalk",
+  name: "stalkv1",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Arjhil",
+  credits: "uzairrajput",
   description: "Get User Information.",
   commandCategory: "other",
   cooldowns: 5

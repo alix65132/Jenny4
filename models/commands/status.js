@@ -2,7 +2,7 @@ module.exports.config = {
   name: "status",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "TuanDzz",
+  credits: "uzairrajput",
   description: "log",
   commandCategory: "System",
   usages: "",

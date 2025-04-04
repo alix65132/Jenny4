@@ -23,6 +23,6 @@ module.exports.run = async({ api, event, Threads, global }) => {
    var mention = Object.keys(event.mentions);
      let tag = event.mentions[mention].replace("@", "");
     if (!mention) return api.sendMessage("𝑃𝑙𝑒𝑎𝑠𝑒 𝐴𝑘 𝐼𝑑 𝑀𝑒𝑛𝑡𝑖𝑜𝑛 𝐾𝑎𝑟𝑒𝑛..", threadID, messageID);
-   var callback = () => api.sendMessage({body:`Slapped - ${tag} 🤧` + `\n\sorry likin meRa dil kar raha tha tumhare kan ke niche ak bajane ka 🙂`,mentions: [{tag: tag,id: Object.keys(event.mentions)[0]}],attachment: fs.createReadStream(__dirname + "/cache/slap.gif")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/slap.gif"));  
-      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/slap.gif")).on("close",() => callback());
+   var callback = () => api.sendMessage({body:`Slapped - ${tag} 🤧` + `\n\sorry likin meRa dil kar raha tha tumhare kan ke niche ak bajane ka 🙂`,mentions: [{tag: tag,id: Object.keys(event.mentions)[0]}],attachment: fs.createReadStream(__dirname + "/uzair/slap.gif")}, event.threadID, () => fs.unlinkSync(__dirname + "/uzair/slap.gif"));  
+      return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/uzair/slap.gif")).on("close",() => callback());
 }

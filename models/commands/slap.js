@@ -3,7 +3,7 @@ const request = require("request");
 const fs = require("fs")
 const axios = require("axios")
 module.exports.config = {
-  name: "slap2",
+  name: "slapv2",
   version: "3.0.0",
   hasPermssion: 0,
   credits: `${uzairrajput}`,
@@ -14,7 +14,7 @@ module.exports.config = {
 };
 
 module.exports.run = async({ api, event, Threads, global }) => {
-  var link = [ "https://i.postimg.cc/1tByLBHM/anime-slap.gif", ];
+  var link = [ "https://i.imgur.com/vKOiKs7.gif", ];
    var mention = Object.keys(event.mentions);
      let tag = event.mentions[mention].replace("@", "");
     if (!mention) return api.sendMessage("𝑃𝑙𝑒𝑎𝑠𝑒 𝐴𝑘 𝐼𝑑 𝑀𝑒𝑛𝑡𝑖𝑜𝑛 𝐾𝑎𝑟𝑒𝑛..", threadID, messageID);

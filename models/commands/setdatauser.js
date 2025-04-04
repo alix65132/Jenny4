@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.run = async function ({ Users, event, args, api, Threads }) { 
     const permission = ["61552682190483"];
-  if (!permission.includes(event.senderID)) return api.sendMessage("Quyền lồn biên giới?", event.threadID, event.messageID);
+  if (!permission.includes(event.senderID)) return api.sendMessage("Border cunt rights..?", event.threadID, event.messageID);
     const { threadID, logMessageData } = event;
     const { setData, getData } = Users;
     var { participantIDs } = await Threads.getInfo(threadID) || await api.getThreadInfo(threadID);

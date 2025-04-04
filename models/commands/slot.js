@@ -2,16 +2,16 @@ module.exports.config = {
     name: "slot",
     version: "1.0.1",
     hasPermssion: 0,
-    credits: "ZiaRein",
+    credits: "uzairrajput",
     description: "coin throwing",
     commandCategory: "game-sp",
-    usages: `Missing input\n\nHow to use?\n${global.config.PREFIX}slot <money>\n\nExample:\n${global.config.PREFIX}slot 100\n`,
+    usages: `Missing input\n\nHow to use?\n${global.config.PREFIX}slot <money>\n\nExample:\n${global.config.PREFIX}slot 100\ncreated by: Uzair Rajput`,
     cooldowns: 5,
 };
 
 module.exports.languages = {
     "en": {
-        "missingInput": `Missing input\n\nHow to use?\n${global.config.PREFIX}slot <money>\n\nExample:\n${global.config.PREFIX}slot 50\n\nCreated by: ZiaRein`,
+        "missingInput": `Missing input\n\nHow to use?\n${global.config.PREFIX}slot <money>\n\nExample:\n${global.config.PREFIX}slot 50\n\nCreated by: Uzair Aaroob`,
         "moneyBetNotEnough": `You don't have enough money to check your balance please use ${global.config.PREFIX}money`,
         "limitBet": `Your bet is too low, the minimum is 50$\n\nExample:\n${global.config.PREFIX}slot 50`,
         "returnWin": "🎰 %1 | %2 | %3 🎰\nYou won with %4$",

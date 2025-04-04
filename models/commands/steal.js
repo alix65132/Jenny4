@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "steal",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "ZiaRein",
+	credits: "uzairrajput",
 	description: "thief",
 	commandCategory: "economy",
 	usages: "send message",

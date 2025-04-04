@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "short",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Joshua Sy",
+	credits: "uzairrajput",
 	description: "shortlink",
   usages: "link or text",
 	commandCategory: "...",

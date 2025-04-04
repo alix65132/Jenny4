@@ -2,7 +2,7 @@ module.exports.config = {
  name: "siesta",
  version: "1.0.0",
  hasPermssion: 0,
- credits: "JRT",
+ credits: "uzairrajput",
  description: "Random photo Siesta my wife UwU",
  commandCategory: "Random-IMG",
  usages: "siesta",

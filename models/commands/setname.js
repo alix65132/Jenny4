@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "setname",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Zia^Rein",
+	credits: "uzairrajput",
 	description: "set group nickname",
 	commandCategory: "Group",
 	usages: "[name]",

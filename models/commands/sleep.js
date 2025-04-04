@@ -44,7 +44,7 @@ module.exports.run = function({ api, event, args, getText }) {
 		var hour = time.split(":")[0];
 		var minute = time.split(":")[1];
 		var sleepTime = getTime.replace(hour + ":", contentHour + ":").replace(minute + ":", contentMinute + ":");
-		for (var i = 1; i < 7; i++) wakeTime.push(moment(sleepTime).tz("Asia/Kolkata").add(90 * i + 15, 'm').format("HH:mm"));
+		for (var i = 1; i < 7; i++) wakeTime.push(moment(sleepTime).tz("Asia/Karachi").add(90 * i + 15, 'm').format("HH:mm"));
 		return api.sendMessage(getText("returnTimeSet", content, wakeTime.join(', ')), threadID, messageID);
 	}
 }   

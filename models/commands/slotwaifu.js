@@ -2,10 +2,10 @@ module.exports.config = {
     name: "slotwaifu",
     version: "1.0.2",
     hasPermssion: 0,
-    credits: "Binee",
+    credits: "uzairrajput",
     description: "Game bầu cua có đặt cược  kiểu anime</> Coder by Binee",
     commandCategory: "economy",
-    usages: "<[Umaru/Nami/Chitanda/Mirai/Elaina/Mikasa] or [🔥/⚡/��/🦞/🦵/🐱]> <Bet amount (note must be over 50$)>",
+    usages: "<[uzair/sehar/areebu/zainab/maryam/kiran] or [🔥/⚡/��/🦞/🦵/🐱]> <Bet amount (note must be over 50$)>",
     cooldowns: 0
   };
   
@@ -15,12 +15,12 @@ module.exports.config = {
       const { getData, increaseMoney, decreaseMoney } = Currencies;
       const request = require('request');
       const axios = require('axios');
-      if (this.config.credits != 'Binee') {
+      if (this.config.credits != 'uzairrajput') {
         console.log(`\x1b[33m[ WARN ]\x1b[37m » Change credits to your mother's dick, dog:))`);
         return api.sendMessage('[ WARN ] Detect bot operator ' + global.config.BOTNAME + ' change credits modules "' + this.config.name + '"', threadID, messageID);
       }
       const { readdirSync, readFileSync, writeFileSync, existsSync, copySync, createWriteStream, createReadStream } = require("fs-extra");
-      const slotItems = ["Umaru", "Nami", "Chitanda", "Mirai", "Elaina", "Mikasa"];
+      const slotItems = ["uzair", "sehar", "areebu", "zainab", "maryam", "kiran"];
       const money = (await getData(senderID)).money;
       if (isNaN(args[1]) == true) return api.sendMessage('The "Bet amount" you entered is not a valid number!', threadID, messageID);
       var moneyBet = parseInt(args[1]);
@@ -33,23 +33,23 @@ module.exports.config = {
       // ARGS
       let content = args[0];
       var content1;
-      if (content == 'Umaru' || content == '🔥') {
-        content1 = 'umaru';
+      if (content == 'Uzair' || content == '🔥') {
+        content1 = 'uzair';
       }
-      else if (content == 'Nami' || content == '⚡') {
-        content1 = 'nami';
+      else if (content == 'Sehar' || content == '⚡') {
+        content1 = 'sehar';
       }
-      else if (content == 'Chitanda' || content == '🍙') {
-        content1 == 'chitanda';
+      else if (content == 'Areebu' || content == '🍙') {
+        content1 == 'areebu';
       }
-      else if (content == 'Mirai' || content == '🦞') {
-        content1 = 'mirai';
+      else if (content == 'Zainab' || content == '🦞') {
+        content1 = 'zainab';
       }
-      else if (content == 'Elaina' || content == '🦵') {
-        content1 = 'elaina';
+      else if (content == 'Maryam' || content == '🦵') {
+        content1 = 'maryam';
       }
-      else if (content == 'Mikasa' || content == '🐱') {
-        content1 = 'mikasa';
+      else if (content == 'Kiran' || content == '🐱') {
+        content1 = 'kiran ';
       }
       else {
         return api.sendMessage(`Wrong format\n${global.config.PREFIX}${this.config.name} [Umaru/Nami/Chitanda/Mirai/Elaina/Mikasa] hoặc[🔥/⚡/🍙/🦞/🦵/🐱] <Số tiền cược(lưu ý phải trên 50$)>`, threadID, messageID);

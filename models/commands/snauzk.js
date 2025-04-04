@@ -2,7 +2,7 @@ module.exports.config = {
 	name:"snauzk",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "Binee",
+	credits: "uzairrajput",
 	description: "Random video tiktok channel snauzk",
 	commandCategory: "media",
 	cooldowns: 3

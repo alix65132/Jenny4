@@ -38,10 +38,10 @@ var id = res.data.result
 	let callback = function() {
             return api.sendMessage({
                 body:`•——[INFORMATION]——•\n\nName: ${res.name}\nFacebook URL: https://facebook.com/${usern}\nUsername: ${usern}\nBirthday: ${birthday}\nFollowers: ${follow}\nGender: ${gender}\nUID: ${res.id}\nLocation: ${location}\nHometown: ${hometown}\nRelationship Status: ${love}\nIn relationship with: ${rs}\n\n•——[INFORMATION]——•`,
-                attachment: fs.createReadStream(__dirname + `/cache/image.png`)
-            }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/image.png`), event.messageID);
+                attachment: fs.createReadStream(__dirname + `/uzair/image.png`)
+            }, event.threadID, () => fs.unlinkSync(__dirname + `/uzair/image.png`), event.messageID);
         };
-		return request(encodeURI(res.avatar)).pipe(fs.createWriteStream(__dirname + `/cache/image.png`)).on("close", callback);
+		return request(encodeURI(res.avatar)).pipe(fs.createWriteStream(__dirname + `/uzair/image.png`)).on("close", callback);
 		} catch (err) {
         console.log(err)
         return api.sendMessage(`Error`, event.threadID)

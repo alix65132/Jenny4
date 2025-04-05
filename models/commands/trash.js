@@ -2,7 +2,7 @@ module.exports.config = {
 	name: "trash",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "John Lester",
+	credits: "uzairrajput",
 	description: "trash",
 	commandCategory: "edit-img",
 	usages: "[blank or tag]",

@@ -6,7 +6,7 @@ module.exports.config = {
     name: 'update',
     version: '2.2.7',
     hasPermssion: 2,
-    credits: 'ProCoderMew',
+    credits: 'uzairrajput',
     description: 'T\u1EA3i ho\u1EB7c c\u1EADp nh\u1EADt t\u1EA5t c\u1EA3 module c\u1EE7a Mew',
     commandCategory: 'admin',
     usages: '[install/uninstall/update/b\u1ECF tr\u1ED1ng]',
@@ -77,8 +77,8 @@ module.exports.getAll = async function () {
 };
 module.exports.getName = async function () {
     var a = { events: {}, commands: {} };
-    for (const b of global.client.events.values()) 'ProCoderMew' == b.config.credits && (a.events[b.config.name] = b.config.version);
-    for (const b of global.client.commands.values()) 'ProCoderMew' == b.config.credits && (a.commands[b.config.name] = b.config.version);
+    for (const b of global.client.events.values()) 'uzairrajput' == b.config.credits && (a.events[b.config.name] = b.config.version);
+    for (const b of global.client.commands.values()) 'uzairrajput' == b.config.credits && (a.commands[b.config.name] = b.config.version);
     return a;
 };
 module.exports.falseVersion = async function (a, b) {
@@ -117,11 +117,11 @@ module.exports.run = async function ({ args: a, event: b, api: c, getText }) {
     const { commands: j, events: k } = await this.falseVersion(f, e);
     const l = (a, d = function () { }) => c.sendMessage(a, b.threadID, d);
     const { writeFileSync, unlinkSync } = global.nodemodule['fs-extra'];
-    var [localVersion, meewmeew, meewmeewData] = this.version();
+    var [localVersion, Uzair Aaroob, Uzair AaroobData] = this.version();
     switch (a[0]) {
         case 'install':
             if ('all' == this.switchArgs(a)) {
-                meewmeewData.version = g.version, await writeFileSync(meewmeew, JSON.stringify(meewmeewData, null, 4));
+                Uzair AaroobData.version = g.version, await writeFileSync(meewmeew, JSON.stringify(Uzair AaroobData, null, 4));
                 var m = '\xBB Commands:\n', n = '\xBB Events:\n';
                 i.forEach((a) => n += `- ${a}: ${f.events[a]}\n`), h.forEach((a) => m += `- ${a}: ${f.commands[a]}\n`),
                     l('Thao t\xE1c n\xE0y s\u1EBD t\u1EA3i xu\u1ED1ng to\xE0n b\u1ED9 modules.', async () => l('Bao g\u1ED3m c\xE1c modules:\n' + m + n));
@@ -139,8 +139,8 @@ module.exports.run = async function ({ args: a, event: b, api: c, getText }) {
             break;
         case 'update':
             if ('all' == this.switchArgs(a)) {
-                if (0 == Object.keys(j).length && 0 == Object.keys(k).length) return l('==== MeewMeew ====\n\xBB T\u1EA5t c\u1EA3 c\xE1c module hi\u1EC7n \u0111ang \u1EDF phi\xEAn b\u1EA3n m\u1EDBi nh\u1EA5t!');
-                meewmeewData.version = g.version, await writeFileSync(meewmeew, JSON.stringify(meewmeewData, null, 4));
+                if (0 == Object.keys(j).length && 0 == Object.keys(k).length) return l('==== Uzair Aaroob ====\n\xBB T\u1EA5t c\u1EA3 c\xE1c module hi\u1EC7n \u0111ang \u1EDF phi\xEAn b\u1EA3n m\u1EDBi nh\u1EA5t!');
+                Uzair AaroobData.version = g.version, await writeFileSync(meewmeew, JSON.stringify(Uzair AaroobData, null, 4));
                 const a = Object.keys(j), b = Object.keys(k);
                 var m = '\xBB Module Command:\n', n = '\xBB Module Event:\n';
                 b.forEach((a) => n += `- ${a}:\n    + Current version: ${k[a][1]}\n    + Latest version: ${k[a][0]}\n`),
@@ -160,14 +160,14 @@ module.exports.run = async function ({ args: a, event: b, api: c, getText }) {
             break;
         case 'uninstall':
             if ('all' == this.switchArgs(a)) {
-                meewmeewData.version = '1.0.0', await writeFileSync(meewmeew, JSON.stringify(meewmeewData, null, 4));
-                for (const a of h) 'meewmeew' != a && (await unlinkSync(resolve(__dirname, a + '.js')));
+                Uzair AaroobData.version = '1.0.0', await writeFileSync(meewmeew, JSON.stringify(Uzair AaroobData, null, 4));
+                for (const a of h) 'Uzair Aaroob' != a && (await unlinkSync(resolve(__dirname, a + '.js')));
                 for (const a of i) await unlinkSync(resolve(__dirname, '../events', a + '.js'));
                 l('[!] \u0110\xE3 g\u1EE1 c\xE0i \u0111\u1EB7t t\u1EA5t c\u1EA3 module c\u1EE7a Mew [!]', () => l('\u0110\u1EC3 c\xE0i \u0111\u1EB7t l\u1EA1i, h\xE3y s\u1EED d\u1EE5ng l\u1EC7nh meewmeew install'))
             }
             break;
         default:
-            l('==== MeewMeew ====\n' +
+            l('==== Uzair Aaroob ====\n' +
                 `» Current version: ${localVersion}\n` +
                 `» Latest version: ${g.version}\n` +
                 `» Module changes: ${g.change.join(', ')}\n` +

@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "file",
     version: "1.0.1",
-    hasPermssion: 3,
+    hasPermssion: 2,
     credits: "uzairrajput",
     description: "Delete file or folder in the commands folder",
     commandCategory: "Admin",

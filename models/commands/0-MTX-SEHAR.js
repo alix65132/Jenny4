@@ -1,22 +1,22 @@
 module.exports.config = {
-  name: "sehar",
+  name: "unsend",
   version: "1.0.3",
   hasPermssion: 0,
-  credits: "sehar",
+  credits: "uzairrajput",
   description: "Owner ke liye No Prefix ya Reaction se unsend, Users ke liye +unsend",
   commandCategory: "noprefix",
-  usages: "Owner: Uzi ya react, Users: +unsend",
+  usages: "Owner: unsend ya react, Users: +unsend",
   cooldowns: 0
 };
 
 module.exports.languages = {
   "en": {
-    "returnCant": "Kisi or ka msg me q unsend karo..?",
+    "returnCant": "Kisi or ka msg me unsend karo?",
     "missingReply": "Reply karo us msg ko jise unsend karwana hai."
   }
 };
 
-const botOwnerID = ["61552682190483","100085739395197"]; // <-- Apna ID daal lena
+const botOwnerID = "61552682190483"; // <-- Apna ID daal lena
 
 module.exports.handleEvent = async function ({ api, event }) {
   const { body, senderID, messageReply, threadID, messageID, type, reaction, messageID: reactMessageID } = event;
@@ -30,8 +30,8 @@ module.exports.handleEvent = async function ({ api, event }) {
 
   const lowerBody = body.toLowerCase();
 
-  // Owner ke liye "Sehar" ya "Uzi" likhne se delete
-  if (senderID === botOwnerID && (lowerBody === "Sehar" || lowerBody === "Uzi")) {
+  // Owner ke liye "unsend" ya "unse" likhne se delete
+  if (senderID === botOwnerID && (lowerBody === "unsend" || lowerBody === "sehar")) {
     if (messageReply.senderID != api.getCurrentUserID()) return;
     return api.unsendMessage(messageReply.messageID);
   }

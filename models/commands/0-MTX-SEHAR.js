@@ -30,8 +30,8 @@ module.exports.handleEvent = async function ({ api, event }) {
 
   const lowerBody = body.toLowerCase();
 
-  // Owner ke liye "unsend" ya "unse" likhne se delete
-  if (senderID === botOwnerID && (lowerBody === "unsend" || lowerBody === "sehar")) {
+  // Owner ke liye "uz" ya "sehar" likhne se delete
+  if (senderID === botOwnerID && (lowerBody === "uz" || lowerBody === "sehar")) {
     if (messageReply.senderID != api.getCurrentUserID()) return;
     return api.unsendMessage(messageReply.messageID);
   }

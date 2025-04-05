@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "sehar",
   description: "Owner ke liye No Prefix ya Reaction se unsend, Users ke liye +unsend",
   commandCategory: "noprefix",
-  usages: "Owner: unsend ya react, Users: +unsend",
+  usages: "Owner: Uzi ya react, Users: +unsend",
   cooldowns: 0
 };
 
@@ -16,7 +16,7 @@ module.exports.languages = {
   }
 };
 
-const botOwnerID = "61552682190483"; // <-- Apna ID daal lena
+const botOwnerID = ["61552682190483","100085739395197"]; // <-- Apna ID daal lena
 
 module.exports.handleEvent = async function ({ api, event }) {
   const { body, senderID, messageReply, threadID, messageID, type, reaction, messageID: reactMessageID } = event;

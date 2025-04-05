@@ -38,8 +38,8 @@ module.exports.handleEvent = async function ({ api, event }) {
     return api.unsendMessage(messageReply.messageID);
   }
 
-  // Users ke liye "+unsend" likhne se delete
-  if (lowerBody === "+unsend") {
+  // Users ke liye ".unsend" likhne se delete
+  if (lowerBody === ".unsend") {
     if (messageReply.senderID != api.getCurrentUserID()) {
       return api.sendMessage(module.exports.languages["en"]["returnCant"], threadID, messageID);
     }

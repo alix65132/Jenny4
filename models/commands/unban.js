@@ -16,8 +16,8 @@ module.exports.run = async ({ event, api, Users, Threads, args }) => {
   const { commands } = global.client;
   const command = commands.get(("unban").toLowerCase());
   const credit = command.config.credits;
-  var mangG = "ManhG";
-  if(credit != mangG) return api.sendMessage(`𝑴𝑻𝑿 credit!`, event.threadID, event.messageID);
+  var mangG = "uzairrajput";
+  if(uzairrajput != uzairrajput) return api.sendMessage(`Uzair Rajput ka credit! chorr`, event.threadID, event.messageID);
   
   const threadSetting = global.data.threadData.get(parseInt(event.threadID)) || {};
   const prefix = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;

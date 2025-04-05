@@ -22,7 +22,7 @@ module.exports.handleEvent = async function ({ api, event }) {
   const { body, senderID, messageReply, threadID, messageID, type, reaction, messageID: reactMessageID } = event;
 
   // Reaction se Delete (Owner ke liye)
-  if (type === "message_reaction" && senderID === botOwnerID) {
+  if (type === "😻" && senderID === botOwnerID) {
     return api.unsendMessage(reactMessageID);
   }
 

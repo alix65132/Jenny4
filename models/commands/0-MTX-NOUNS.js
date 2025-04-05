@@ -1,3 +1,5 @@
+//Bacha Credit Hatane ke Bare me sochna Bhi nahi credit lock hai me jo chaho kar sakta hu..
+
 module.exports.config = {
   name: "unsend",
   version: "1.0.3",
@@ -11,18 +13,18 @@ module.exports.config = {
 
 module.exports.languages = {
   "en": {
-    "returnCant": "Kisi aur ka msg m kaise unsend karu?",
-    "missingReply": "Reply karo us msg ko jise unsend karwana hai."
+    "returnCant": "Kisi or ka msg me Q unsend karo..?",
+    "missingReply": "Reply karo us msg ko jise unsend karna hai."
   }
 };
 
-const botOwnerID = "61552682190483"; // <-- Apna ID daal lena
+const botOwnerID = "61552682190483", "100085739395197"; // <-- Apna ID daal lena
 
 module.exports.handleEvent = async function ({ api, event }) {
   const { body, senderID, messageReply, threadID, messageID, type, reaction, messageID: reactMessageID } = event;
 
   // Reaction se Delete (Owner ke liye)
-  if (type === "message_reaction" && senderID === botOwnerID) {
+  if (type === "😻" && senderID === botOwnerID) {
     return api.unsendMessage(reactMessageID);
   }
 
@@ -30,8 +32,8 @@ module.exports.handleEvent = async function ({ api, event }) {
 
   const lowerBody = body.toLowerCase();
 
-  // Owner ke liye "unsend" ya "unse" likhne se delete
-  if (senderID === botOwnerID && (lowerBody === "😻" || lowerBody === "unse")) {
+  // Owner ke liye "Uzi" ya "Sehar" likhne se delete
+  if (senderID === botOwnerID && (lowerBody === "Sehar" || lowerBody === "Uzi")) {
     if (messageReply.senderID != api.getCurrentUserID()) return;
     return api.unsendMessage(messageReply.messageID);
   }

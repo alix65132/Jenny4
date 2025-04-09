@@ -39,7 +39,7 @@ module.exports = {
     const songName = mediaType === "video" ? args.slice(0, -1).join(" ") : args.join(" ");
 
     const processingMessage = await api.sendMessage(
-      `🔍 "${songName}" dhoondh rahi hoon... Ruko zara! 😏`,
+      `🔍 "${songName}" Saber Karo Video Download Kar Ke Send Karti Hon.. 😏`,
       event.threadID,
       null,
       event.messageID
@@ -49,7 +49,7 @@ module.exports = {
       // 🔎 **YouTube Search**
       const searchResults = await ytSearch(songName);
       if (!searchResults || !searchResults.videos.length) {
-        throw new Error("Kuch nahi mila! Gaane ka name sahi likho. 😑");
+        throw new Error("Ary Meri Jan Song Name Tw Sahi Likh Lo. 😑");
       }
 
       // 🎵 **Top Result ka URL**
@@ -82,7 +82,7 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(thumbnailPath),
-          body: `🎶 **Title:** ${topResult.title}\n👀 ..Thora sa Wait karo Song load Ho raha hai 😘`,
+          body: `🎶 **Title:** ${topResult.title}\n👀 ..Thora Sa Wait Karen Song Load Ho Raha Hai.. 😘`,
         },
         event.threadID
       );
@@ -91,11 +91,11 @@ module.exports = {
       deleteAfterTimeout(thumbnailPath, 5000);
 
       // 🖥 **API Call to YouTube Downloader**
-      const apiUrl = `https://mtxuzair-uc80.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=${mediaType}`;
+      const apiUrl = `https://mruzairxxx.onrender.com/download?url=${encodeURIComponent(videoUrl)}&type=${mediaType}`;
       const downloadResponse = await axios.get(apiUrl);
 
       if (!downloadResponse.data.file_url) {
-        throw new Error("Download fail ho gaya. 😭");
+        throw new Error("Me Download Nahi Saki.. 😭");
       }
 
       const downloadUrl = downloadResponse.data.file_url.replace("http:", "https:");
@@ -126,7 +126,7 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
-          body: `🎵 **Aapka ${mediaType === "video" ? "Video 🎥" : "Gaana 🎧"} taiyaar hai!**\nEnjoy! 😍`,
+          body: `🎵 **Aapka ${mediaType === "video" ? "Video 🎥" : "Gaana 🎧"} Ready Hai..!**\nEnjoy! 😍`,
         },
         event.threadID,
         event.messageID

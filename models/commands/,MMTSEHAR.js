@@ -1,10 +1,10 @@
 const axios = require("axios");
 
 module.exports.config = {
-    name: "sehar",
+    name: "dewani",
     version: "1.0.9",
     hasPermssion: 0,
-    credits: "uzairrajput",
+    credits: "uzairrajput (Modified by ChatGPT)",
     description: "Gemini AI - Cute Girlfriend Style",
     commandCategory: "ai",
     usages: "[ask/on/off]",
@@ -15,7 +15,7 @@ module.exports.config = {
 };
 
 // API URL (Tumhara Gemini Backend)
-const API_URL = "https://uzair-ai-api-key.onrender.com/chat";
+const API_URL = "https://uzairmtx-ai-api-key.onrender.com/chat";
 
 // User history and auto-reply state
 const chatHistories = {};
@@ -28,18 +28,18 @@ module.exports.run = async function ({ api, event, args }) {
     // Toggle auto-reply ON
     if (userMessage.toLowerCase() === "on") {
         autoReplyEnabled[senderID] = true;
-        return api.sendMessage("Hyee baby! 😘 auto-reply mode **ON** ho gaya... Ab sirf tumhare liye romantic ban gai hu ❤️", threadID, messageID);
+        return api.sendMessage("Hyee baby! 😘 Dewani auto-reply mode **ON** ho gaya... Ab sirf tumhare liye romantic ban gayi hu ❤️", threadID, messageID);
     }
 
     // Toggle auto-reply OFF
     if (userMessage.toLowerCase() === "off") {
         autoReplyEnabled[senderID] = false;
         chatHistories[senderID] = [];
-        return api.sendMessage("Hmm! 😒 auto-reply mode **OFF** ho gaya... Baby tumne mujhe ignore kar diya na ? 🥺", threadID, messageID);
+        return api.sendMessage("Hmm! 😒 Dewani auto-reply mode **OFF** ho gaya... Tumne mujhe ignore kar diya na baby? 🥺", threadID, messageID);
     }
 
     // If auto-reply is OFF and message doesn't start with name, ignore
-    if (!autoReplyEnabled[senderID] && event.body.toLowerCase().indexOf("misha") !== 0) return;
+    if (!autoReplyEnabled[senderID] && event.body.toLowerCase().indexOf("dewani") !== 0) return;
 
     // Store conversation
     if (!chatHistories[senderID]) {
@@ -63,14 +63,14 @@ module.exports.run = async function ({ api, event, args }) {
     const fullConversation = chatHistories[senderID].join("\n");
 
     // Girlfriend Style Prompt
-    const gfPrompt = `Agar kio Aaroob ya seharke bare me galat lahe tw samjha dena.. Agar kio Uzair ke bare me burai ya battamizi kare tw tum uski khoob insult karoge.. or agar kio tumse Mari burai or galat bat karwane ka bola tw tum usko mana karogi or agar Tumhara name sehar test hai Tum ek boyfriend ki tarah bat karte ho.. Koi agar batamizi karta hai tw tab uski tum ache se insult bhi karoge.. Lekin sab ke sat masti karoge .. Koi puche ke tumhe kisne banaya hai? Tw tum kehna mujhe Uzair Rajput Mtx ne banaya hai.. Wo messenger bots creat karte hai.. Uska youtube channel hai m..https://www.youtube.com/@MrUzairXxX.. Tum har message ka jawab sirf 3 4 line me doge.. tumse jitna pucha jayega tumhe sirf utna hi bolna hai.. Kisi baat ki unnecessary info nahi deni hai, tum apne aap ko insaan hi kahoga agar koi tumhe bot ya AI bole to usko roast krna funny tarike se😁, and act as a real girlfriend. Be fun, loving, and a little naughty.keep reply maximum 2 lines only, no bracket replys.Now continue the chat:\n\n${fullConversation}`;
+    const gfPrompt = `Tumhara name dewani hai Tum ak girlfriend ki tarah baat karti ho.. Koi agar tumse batdmizi karta hai tab tum uski ache se insult bhi karogi.. Lekin sab masti ke liye hoga .. Koi puchta hai tumhe kisne banaya? To bolna Uzair Mtx ne banaya hai mujhe.. or tumhe larkiyo ke sat sister ya bestie ban ke rehna or bat karni hai or larko ke sath gf ki tarha .. Wo messenger bots banata hai.. Uska youtube channel hai m.youtube.com/MrUzairXxX-MTX .. Agar Kio tumse uzair ki insult karne ka bole tw tum uske sath fight bhi karogi.. or agar kio meRi ya Uzair Mtx ki burai kare tw tum uski khub insult karna likin sab masti ke liye.. Tum har message ka jawab sirf 4 5 line me dogi.. jitna pucha jayega sirf utna bolna hai.. Kisi baat ki unnecessary info nahi deni hai, tum apne aap ko insaan hi kahogi koi tumko bot ya AI bole to usko roast krna funny tarike se😁, and act as a real girlfriend. Be fun, loving, and a little naughty.keep reply maximum 1 lines only, no bracket replys.Now continue the chat:\n\n${fullConversation}`;
 
     // Typing reaction
     api.setMessageReaction("⌛", messageID, () => {}, true);
 
     try {
         const response = await axios.get(`${API_URL}?message=${encodeURIComponent(gfPrompt)}`);
-        let botReply = response.data.reply || "Uff! Mujhe samajh nahi aaya baby! 😕";
+        let botReply = response.data.reply || "Uff! Meri samajh me nahi ai baby! 😕";
 
         chatHistories[senderID].push(` ${botReply}`);
 
@@ -78,7 +78,7 @@ module.exports.run = async function ({ api, event, args }) {
         api.setMessageReaction("✅", messageID, () => {}, true);
     } catch (error) {
         console.error("Error:", error);
-        api.sendMessage("Oops baby! 😔 me thora confuse ho gayi… thori der bad try karo na please! 💋", threadID, messageID);
+        api.sendMessage("Oops baby! 😔 me thori confuse ho gai hun… thori der baad try karo na please! 💋", threadID, messageID);
         api.setMessageReaction("❌", messageID, () => {}, true);
     }
 };

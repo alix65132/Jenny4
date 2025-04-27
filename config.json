@@ -3,9 +3,9 @@
     "keyActive": "",
     "DeveloperMode": false,
     "autoCreateDB": true,
-    "allowInbox": true,
+    "allowInbox": false,
     "autoClean": true,
-    "adminOnly": true,
+    "adminOnly": false,
     "keyAdminOnly": "",
     "commandDisabled": [
         "",
@@ -18,13 +18,13 @@
         "",
         ""
     ],
-    "BOTOWNER": "†『 ⸙ †ĸɩŋʛ ʋʑʌɩʀ.𝐱͜͡ᴆ 』†",
-    "OWNERLINK": "https://www.facebook.com/profile.php?id=61552682190483",
+    "BOTOWNER": "𝑴𝒓𝑼𝒛𝒂𝒊𝒓𝑿𝒙𝑿-𝑴𝑻𝑿",
+    "OWNERLINK": "https://www.facebook.com/Mtxuzair",
     "OWNERID": "61552682190483",
-    "BOTCREATOR": "†『 ⸙ †ĸɩŋʛ ʋʑʌɩʀ.𝐱͜͡ᴆ 』†",
-    "APIKEY": "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",
+    "BOTCREATOR": "𝑴𝑻𝑿 💚✨",
+    "APIKEYz": "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",
     "openai": "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",
-    "CREATORLINK": "https://www.facebook.com/profile.php?id=61552682190483",
+    "CREATORLINK": "https://www.facebook.com/Mtxuzair",
     "PERMISSION1": [
         "61552682190483",
         "",
@@ -33,7 +33,7 @@
     ],
     "RestartEvery": 30,
     "ONLY": [
-        "61552682190483",
+        "",
         "",
         ""
     ],
@@ -43,26 +43,6 @@
     "PREFIX": ".",
     "ADMINBOT": [
         "61552682190483",
-        "100047059713717",
-        "100010054632516",
-        "100086716792385",
-        "100085739395197",
-        "61552682190483",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
         "",
         "",
         "",
@@ -104,7 +84,7 @@
         "cooldownTime": 1200000
     },
     "youtube-video": {
-        "MrUzairXxX": "AIzaSyC6kH1Zl6mJ20KXr2AsPC_wF2IHEFuioxo"
+        "YOUTUBE_API": "AIzaSyAV1Ob0n_87tZSmCMorTGE-jHVrAvnXcIM"
     },
     "linkword": {
         "APIKEY": ""
@@ -297,10 +277,20 @@
         "autoUnsend": "",
         "unsendMessageAfter": 5
     },
-    "music": {
+    "musicv1": {
         "YOUTUBE_API": "AIzaSyAwzbcb-6QAzgZtl4qf3Z2GhQ3mqrbbMR8"
     },
-    "alltag": {
+    "batmanslap": {
+        "APIKEY": ""
+    },
+    "checkgroup": {
         "maxColumn": 10
+    },
+    "videov1": {
+        "YOUTUBE_API": "AIzaSyBFNMIC7pTPGo2zBxE8JrF0oPpOpxV6KU8"
+    },
+    "botcheck": {
+        "autoUnsend": "",
+        "unsendMessageAfter": 5
     }
 }
